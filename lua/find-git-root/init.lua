@@ -4,7 +4,7 @@ function M.find_git_root()
 	local d = vim.fn.expand("%:p:h", nil, nil)
 	for _ = 1, 10 do
 		-- print(d .. "/.git")
-		if vim.fn.isdirectory(d .. "/.git/") ~= 0 or vim.fn.filereadable(d .. "/.git") then
+		if vim.fn.isdirectory(d .. "/.git/") ~= 0 or vim.fn.filereadable(d .. "/.git") ~= 0 then
 			-- print("found ")
 			return d
 		end

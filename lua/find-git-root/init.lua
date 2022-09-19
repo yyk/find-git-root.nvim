@@ -17,7 +17,7 @@ function M.cd_git_root()
 	local git_root = M.find_git_root()
 
 	if not git_root then
-		print("No git root found")
+		-- print("No git root found")
 		return
 	end
 
